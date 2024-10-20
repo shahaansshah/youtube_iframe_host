@@ -23,11 +23,13 @@
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          // videoId: 'GuMvZW0BsxM',
+          // videoId: 'kvO_nHnvPtQ',
           playerVars: {
             'mute': 1,
+            'list': LPVlogPlaylist,
             // 'autoplay': 1,
-            'playsinline': 0
+            'playsinline': 0,
+            'rel': 0
           },
           events: {
             'onReady': onPlayerReady,
@@ -49,7 +51,7 @@
 
     </script>
 
-    <p>no vidID</p>
+    <p>no vidID but list param</p>
 
     
   </body>
