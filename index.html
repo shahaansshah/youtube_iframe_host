@@ -46,12 +46,12 @@
         // event.target.playVideo();
         event.target.setPlaybackRate(2);
 
-        event.target.cuePlaylist({list: playlist});
-        event.target.setShuffle(true);
-        shuffled_pl = event.target.getPlaylist();
-        event.target.loadPlaylist(shuffled_pl);
+        // event.target.cuePlaylist({list: playlist});
+        event.target.setShuffle({'shufflePlaylist': true});
+        // shuffled_pl = event.target.getPlaylist();
+        event.target.loadPlaylist(playlist);
         // event.target.setShuffle(true);
-        event.target.setLoop(true);
+        event.target.setLoop({'loopPlaylists': true});
         // event.target.playVideo(); //maybe forget about the ads for now
       }
 
@@ -62,7 +62,7 @@
 
     </script>
 
-    <p>shuffle again</p>
+    <p>shuffle ?</p>
 
     
   </body>
