@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
-
-  
   <body>
-    <p>Hi</p>
+    <p>Hii</p>
+    
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
     <div id="player"></div>
 
     <script>
+
+      // some hard links
+      LPVlogPlaylist = 'PLH3cBjRCyTTwontN4gOIr56ynE8GMhZ2g'
+      
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
@@ -42,9 +45,7 @@
       function onPlayerStateChange(event) {
 
       }
-      function stopVideo() {
-        player.stopVideo();
-      }
+
     </script>
   </body>
 </html>
