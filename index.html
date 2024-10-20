@@ -42,10 +42,10 @@
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-        event.target.playVideo();
-        player.setShuffle(true);
+        // event.target.playVideo();
+        event.target.setShuffle(true);
         event.target.loadPlaylist({list: LenoFlyPlaylist, listType: 'playlist'});
-        // event.target.setShuffle(true);
+        event.target.setShuffle(true);
         event.target.setLoop(true);
         event.target.setPlaybackRate(4);
         // event.target.playVideo(); //maybe forget about the ads for now
@@ -58,7 +58,7 @@
 
     </script>
 
-    <p>speed trial again</p>
+    <p>no playVid</p>
 
     
   </body>
