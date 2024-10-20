@@ -31,8 +31,7 @@
             // 'list': playlist,
             // 'autoplay': 1,
             'playsinline': 0,
-            'rel': 0,
-            'showinfo': 0
+            'rel': 0
             // 'controls': 0
           },
           events: {
@@ -47,11 +46,11 @@
         // event.target.playVideo();
         event.target.setPlaybackRate(2);
 
-        // event.target.cuePlaylist({list: playlist});
+        event.target.cuePlaylist({list: playlist});
         event.target.setShuffle(true);
-        // shuffled_pl = event.target.getPlaylist()
-        event.target.loadPlaylist({list: playlist});
-        event.target.setShuffle(true);
+        shuffled_pl = event.target.getPlaylist();
+        event.target.loadPlaylist(shuffled_pl);
+        // event.target.setShuffle(true);
         event.target.setLoop(true);
         // event.target.playVideo(); //maybe forget about the ads for now
       }
@@ -63,7 +62,7 @@
 
     </script>
 
-    <p>playback6</p>
+    <p>shuffle again</p>
 
     
   </body>
