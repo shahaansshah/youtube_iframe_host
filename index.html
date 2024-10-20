@@ -9,6 +9,7 @@
       // some hard links
       var LPVlogPlaylist = 'PLH3cBjRCyTTwontN4gOIr56ynE8GMhZ2g';
       var LenoFlyPlaylist = 'PLYOovY8-SKcGjW33XcUOCpeRhevMIZehW';
+      var playlist = LenoFlyPlaylist;
       
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -27,10 +28,11 @@
           videoId: 'kvO_nHnvPtQ',
           playerVars: {
             'mute': 1,
-            // 'list': LPVlogPlaylist,
+            // 'list': playlist,
             // 'autoplay': 1,
             'playsinline': 0,
-            'rel': 0
+            'rel': 0,
+            'showinfo': 0
             // 'controls': 0
           },
           events: {
@@ -44,8 +46,11 @@
       function onPlayerReady(event) {
         // event.target.playVideo();
         event.target.setPlaybackRate(2);
+
+        event.target.cuePlaylist({list: playlist});
         event.target.setShuffle(true);
-        event.target.loadPlaylist({list: LenoFlyPlaylist});
+        shuffled_pl = event.target.getPlaylist()
+        // event.target.loadPlaylist({list: playlist});
         event.target.setShuffle(true);
         event.target.setLoop(true);
         // event.target.playVideo(); //maybe forget about the ads for now
@@ -58,7 +63,7 @@
 
     </script>
 
-    <p>playback4</p>
+    <p>playback5</p>
 
     
   </body>
