@@ -30,8 +30,8 @@
             // 'list': LPVlogPlaylist,
             // 'autoplay': 1,
             'playsinline': 0,
-            'rel': 0,
-            'controls': 0
+            'rel': 0
+            // 'controls': 0
           },
           events: {
             'onReady': onPlayerReady,
@@ -53,12 +53,12 @@
 
       // 5. The API calls this function when the player's state changes.
       function onPlayerStateChange(event) {
-        // event.target.playVideo();
+        event.target.setPlaybackRate(4);
       }
 
     </script>
 
-    <p>no lsitType</p>
+    <p>playback2</p>
 
     
   </body>
