@@ -31,8 +31,9 @@
           videoId: 'kvO_nHnvPtQ',
           playerVars: {
             'mute': 1,
-            // 'list': playlist,
-            // 'autoplay': 1,
+            'list': playlist,
+            'autoplay': 1,
+            'shuffle': 1,
             'playsinline': 0,
             'rel': 0
             // 'controls': 0
@@ -53,11 +54,11 @@
         // event.target.loadPlaylist(playlist);
         // event.target.playVideo(); //maybe forget about the ads for now
 
-        event.target.setShuffle(true);
-        event.target.cuePlaylist({ list: playlist, index: startingIndex });
-        event.target.setLoop({ 'shufflePlaylist': true });
+        // event.target.setShuffle(true);
+        // event.target.cuePlaylist({ list: playlist, index: startingIndex });
+        // event.target.setLoop({ 'shufflePlaylist': true });
         
-        event.target.nextVideo();
+        // event.target.nextVideo();
         
       }
 
@@ -72,7 +73,7 @@
 
     </script>
 
-    <p>0</p>
+    <p>10</p>
 
     
   </body>
