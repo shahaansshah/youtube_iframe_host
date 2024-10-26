@@ -54,8 +54,8 @@
         // event.target.playVideo(); //maybe forget about the ads for now
 
         event.target.setShuffle(true);
-        event.target.cuePlaylist(playlist, startingIndex);
-        event.target.setLoop(true);
+        event.target.cuePlaylist({ list: playlist, index: startingIndex });
+        event.target.setLoop({ 'shufflePlaylist': true });
         
         event.target.nextVideo();
         
@@ -72,7 +72,7 @@
 
     </script>
 
-    <p>1</p>
+    <p>0</p>
 
     
   </body>
