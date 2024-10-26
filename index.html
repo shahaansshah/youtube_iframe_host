@@ -10,7 +10,9 @@
       var LPVlogPlaylist = 'PLH3cBjRCyTTwontN4gOIr56ynE8GMhZ2g';
       var LenoFlyPlaylist = 'PLYOovY8-SKcGjW33XcUOCpeRhevMIZehW';
       var bizDoesBC = 'PLdfa34XqP5f2uB9VVfgkrWoqVx5OutjIE';
-      var playlist = bizDoesBC;
+      var randomshortvids = 'PL9FUXHTBubp-_e0wyNu1jfVVJ2QVAi5NW';
+      var playlist = randomshortvids;
+      var startingIndex = Math.floor(Math.random() * 200);
       
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -50,7 +52,7 @@
         // event.target.loadPlaylist(playlist);
         // event.target.playVideo(); //maybe forget about the ads for now
         
-        event.target.cuePlaylist({list: playlist});
+        event.target.cuePlaylist({ list: playlist, index: startingIndex });
         event.target.setShuffle(true);
         event.target.setLoop(true);
         
@@ -65,7 +67,7 @@
 
     </script>
 
-    <p>2</p>
+    <p>1</p>
 
     
   </body>
