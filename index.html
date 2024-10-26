@@ -12,7 +12,7 @@
       var bizDoesBC = 'PLdfa34XqP5f2uB9VVfgkrWoqVx5OutjIE';
       var randomshortvids = 'PL9FUXHTBubp-_e0wyNu1jfVVJ2QVAi5NW';
       var playlist = randomshortvids;
-      var startingIndex = 131 //Math.floor(Math.random() * 200);
+      var startingIndex = Math.floor(Math.random() * 200);
       
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -57,7 +57,7 @@
         event.target.cuePlaylist({ list: playlist, index: startingIndex });
         event.target.setLoop(true);
         
-        event.target.nextVideo();
+        event.target.playVideo();
         
       }
 
@@ -72,7 +72,7 @@
 
     </script>
 
-    <p>1</p>
+    <p>2</p>
 
     
   </body>
