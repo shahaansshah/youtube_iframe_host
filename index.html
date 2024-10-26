@@ -9,7 +9,8 @@
       // some hard links
       var LPVlogPlaylist = 'PLH3cBjRCyTTwontN4gOIr56ynE8GMhZ2g';
       var LenoFlyPlaylist = 'PLYOovY8-SKcGjW33XcUOCpeRhevMIZehW';
-      var playlist = LenoFlyPlaylist;
+      var bizDoesBC = 'PLdfa34XqP5f2uB9VVfgkrWoqVx5OutjIE';
+      var playlist = bizDoesBC;
       
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -25,11 +26,11 @@
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: 'kvO_nHnvPtQ',
+          // videoId: 'kvO_nHnvPtQ',
           playerVars: {
             'mute': 1,
-            // 'list': playlist,
-            // 'autoplay': 1,
+            'list': playlist,
+            'autoplay': 1,
             'playsinline': 0,
             'rel': 0
             // 'controls': 0
@@ -44,11 +45,11 @@
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
         // event.target.playVideo();
-        event.target.setPlaybackRate(2);
+        // event.target.setPlaybackRate(2);
 
         // event.target.cuePlaylist({list: playlist});
         // shuffled_pl = event.target.getPlaylist();
-        event.target.loadPlaylist(playlist);
+        // event.target.loadPlaylist(playlist);
         // event.target.setShuffle({'shufflePlaylist': true});
         // event.target.setShuffle(true);
         event.target.setLoop(true);
@@ -62,7 +63,7 @@
 
     </script>
 
-    <p>shuffle 8</p>
+    <p>1</p>
 
     
   </body>
