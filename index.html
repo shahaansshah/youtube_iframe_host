@@ -54,7 +54,7 @@
         // event.target.playVideo(); //maybe forget about the ads for now
 
         event.target.setShuffle(true);
-        event.target.cuePlaylist({ list: playlist });
+        event.target.cuePlaylist({ list: playlist, index: startingIndex });
         event.target.setLoop(true);
         
         event.target.playVideoAt(startingIndex);
