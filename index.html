@@ -12,7 +12,6 @@
       var bizDoesBC = 'PLdfa34XqP5f2uB9VVfgkrWoqVx5OutjIE';
       var randomshortvids = 'PL9FUXHTBubp-_e0wyNu1jfVVJ2QVAi5NW';
       var playlist = randomshortvids;
-      var startingIndex = Math.floor(Math.random() * 200);
       
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -32,12 +31,11 @@
           playerVars: {
             'mute': 1,
             'list': playlist,
-            // 'index': 41,
             'autoplay': 1,
             'shuffle': 1,
             'playsinline': 0,
             'rel': 0
-            // 'controls': 0
+            'controls': 0
           },
           events: {
             'onReady': onPlayerReady,
@@ -58,7 +56,6 @@
 
         
         event.target.setShuffle(true);
-        // event.target.setShuffle(true);
         event.target.setLoop({ 'shufflePlaylist': true });
         
         event.target.nextVideo();
