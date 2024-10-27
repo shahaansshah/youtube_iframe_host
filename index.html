@@ -31,7 +31,8 @@
           videoId: 'kvO_nHnvPtQ',
           playerVars: {
             'mute': 1,
-            // 'list': playlist,
+            'list': playlist,
+            'index': 41,
             'autoplay': 1,
             'shuffle': 1,
             'playsinline': 0,
@@ -53,14 +54,15 @@
         // shuffled_pl = event.target.getPlaylist();
         // event.target.loadPlaylist(playlist);
         // event.target.playVideo(); //maybe forget about the ads for now
+        // event.target.cuePlaylist({ list: playlist, index: startingIndex });
 
+        
         event.target.setShuffle(true);
-        event.target.cuePlaylist({ list: playlist, index: startingIndex });
         event.target.setShuffle(true);
         event.target.setLoop({ 'shufflePlaylist': true });
         
         event.target.nextVideo();
-        
+        event.target.setPlaybackRate(2);
       }
 
       // 5. The API calls this function when the player's state changes.
