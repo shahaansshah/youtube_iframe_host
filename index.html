@@ -28,7 +28,7 @@
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          // videoId: 'kvO_nHnvPtQ',
+          // videoId: 'kvO_nHnvPtQ', //does having a videoID yield less ads???
           playerVars: {
             'mute': 1,
             'list': playlist,
@@ -38,7 +38,7 @@
             'loop': 1,
             'playsinline': 0,
             'rel': 0
-            // 'controls': 0
+            'controls': 0
           },
           events: {
             'onReady': onPlayerReady,
@@ -77,7 +77,7 @@
 
     </script>
 
-    <p>commenting initial videoID away</p>
+    <p>uncomment controls</p>
 
     
   </body>
