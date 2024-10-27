@@ -9,8 +9,9 @@
       // some hard links
       const LPVlogPlaylist = 'PLH3cBjRCyTTwontN4gOIr56ynE8GMhZ2g';
       const LenoFlyPlaylist = 'PLYOovY8-SKcGjW33XcUOCpeRhevMIZehW';
-      const bizDoesBC = 'PLdfa34XqP5f2uB9VVfgkrWoqVx5OutjIE';
-      const vanger_playlists = [LPVlogPlaylist, LenoFlyPlaylist, bizDoesBC];
+      const bestofChiclets = 'PLdfa34XqP5f01aCbrLsH91KBzM1kU40Ad';
+      const biz = 'PLdfa34XqP5f2uB9VVfgkrWoqVx5OutjIE';
+      const vanger_playlists = [LPVlogPlaylist, LenoFlyPlaylist, bestOfChiclets];
 
       var randomshortvids = 'PL9FUXHTBubp-_e0wyNu1jfVVJ2QVAi5NW';
 
@@ -50,24 +51,15 @@
       }
 
       // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-        // event.target.playVideo();
-        // event.target.setPlaybackRate(2);
-        // shuffled_pl = event.target.getPlaylist();
-        // event.target.loadPlaylist(playlist);
-        // event.target.playVideo(); //maybe forget about the ads for now
-        // event.target.cuePlaylist({ list: playlist, index: startingIndex });
-        // event.target.setLoop(true);
-        
-        
+      function onPlayerReady(event) {     
         event.target.setShuffle(true);
         event.target.nextVideo();
-        event.target.setPlaybackRate(4);
+        event.target.setPlaybackRate(5);
       }
 
       // 5. The API calls this function when the player's state changes.
       function onPlayerStateChange(event) {
-        event.target.setPlaybackRate(4);
+        event.target.setPlaybackRate(5);
       }
 
       // called if a video cannot play for w/e reason
@@ -76,9 +68,6 @@
       }
 
     </script>
-
-    <p>4x speed?</p>
-
     
   </body>
 </html>
