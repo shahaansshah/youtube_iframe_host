@@ -7,13 +7,15 @@
     <script>
 
       // some hard links
-      var LPVlogPlaylist = 'PLH3cBjRCyTTwontN4gOIr56ynE8GMhZ2g';
-      var LenoFlyPlaylist = 'PLYOovY8-SKcGjW33XcUOCpeRhevMIZehW';
-      var bizDoesBC = 'PLdfa34XqP5f2uB9VVfgkrWoqVx5OutjIE';
+      const LPVlogPlaylist = 'PLH3cBjRCyTTwontN4gOIr56ynE8GMhZ2g';
+      const LenoFlyPlaylist = 'PLYOovY8-SKcGjW33XcUOCpeRhevMIZehW';
+      const bizDoesBC = 'PLdfa34XqP5f2uB9VVfgkrWoqVx5OutjIE';
+      const vanger_playlists = [LPVlogPlaylist, LenoFlyPlaylist, bizDoesBC];
+
       var randomshortvids = 'PL9FUXHTBubp-_e0wyNu1jfVVJ2QVAi5NW';
 
-      const vanger_playlists = [LPVlogPlaylist, LenoFlyPlaylist, bizDoesBC];
-      const playlist = randomshortvids // vanger_playlists[ Math.floor(Math.random() * vanger_playlists.length) ];
+      // final playlist
+      const playlist = vanger_playlists[ Math.floor(Math.random() * vanger_playlists.length) ];
       
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -26,8 +28,8 @@
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          height: '390',
-          width: '640',
+          height: '1080',
+          width: '1920',
           videoId: 'kvO_nHnvPtQ', //does having a videoID yield less ads???
           playerVars: {
             'mute': 1,
@@ -56,11 +58,9 @@
         // event.target.playVideo(); //maybe forget about the ads for now
         // event.target.cuePlaylist({ list: playlist, index: startingIndex });
         // event.target.setLoop(true);
-
-        // these do do things
-        event.target.setShuffle(true);
-
         
+        
+        event.target.setShuffle(true);
         event.target.nextVideo();
         event.target.setPlaybackRate(2);
       }
@@ -70,13 +70,14 @@
         event.target.setPlaybackRate(2);
       }
 
+      // called if a video cannot play for w/e reason
       function onPlayerError(event) {
         event.target.nextVideo();
       }
 
     </script>
 
-    <p>removing commented lines</p>
+    <p>1080, editing hard links</p>
 
     
   </body>
