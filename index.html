@@ -11,8 +11,9 @@
       var LenoFlyPlaylist = 'PLYOovY8-SKcGjW33XcUOCpeRhevMIZehW';
       var bizDoesBC = 'PLdfa34XqP5f2uB9VVfgkrWoqVx5OutjIE';
       var randomshortvids = 'PL9FUXHTBubp-_e0wyNu1jfVVJ2QVAi5NW';
-      var playlist = randomshortvids;
-      // var startingIndex = Math.floor(Math.random() * 200);
+
+      const vanger_playlists = [LPVlogPlaylist, LenoFlyPlaylist, bizDoesBC];
+      const playlist = randomshortvids // vanger_playlists[ Math.floor(Math.random() * vanger_playlists.length) ];
       
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -21,20 +22,17 @@
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
+      // 3. This function creates an <iframe> (and YouTube player) after the API code downloads.
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          // videoId: 'kvO_nHnvPtQ', //does having a videoID yield less ads???
+          videoId: 'kvO_nHnvPtQ', //does having a videoID yield less ads???
           playerVars: {
             'mute': 1,
             'list': playlist,
-            // 'index': 41,
             'autoplay': 1,
-            // 'shuffle': 1,
             'loop': 1,
             'playsinline': 0,
             'rel': 0,
@@ -57,11 +55,11 @@
         // event.target.loadPlaylist(playlist);
         // event.target.playVideo(); //maybe forget about the ads for now
         // event.target.cuePlaylist({ list: playlist, index: startingIndex });
+        // event.target.setLoop(true);
 
         // these do do things
         event.target.setShuffle(true);
-        // event.target.setShuffle(true);
-        // event.target.setLoop(true);
+
         
         event.target.nextVideo();
         event.target.setPlaybackRate(2);
@@ -78,7 +76,7 @@
 
     </script>
 
-    <p>add disablekb</p>
+    <p>removing commented lines</p>
 
     
   </body>
